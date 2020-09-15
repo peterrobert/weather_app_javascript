@@ -1,4 +1,22 @@
 //  This is the entry point function
-let container = document.getElementById('content');
+import { CurrentLocation } from "./current";
 
-container.innerHTML = "hey there its working"
+
+class Key {
+
+    static theKey(){
+
+        const Api_key = "cbda9d8d97a7e7bc3e963379b7d996ba";
+
+        return Api_key
+    }
+
+}
+
+CurrentLocation.getCo_ordinate();
+
+export{ Key }
+
+
+
+   

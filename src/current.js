@@ -7,10 +7,12 @@ class CurrentLocation {
     if (navigator.geolocation) {
 
       navigator.geolocation.getCurrentPosition(this.myLocation);
-      
+
     } else {
 
-      console.log("Geolocation is not supported by this browser.");
+      alert('Geolocation is not supported by this browser! Press okey to continue')
+
+     
     }
   }
 
@@ -20,9 +22,9 @@ class CurrentLocation {
     const long = position.coords.longitude;
 
     async function getLocation() {
+        
       const response = await fetch(
-
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${Key.theKey()}`,
+         `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${Key.theKey()}`,
         {
           mode: "cors",
         }
@@ -31,7 +33,7 @@ class CurrentLocation {
 
       const weatherData = await response.json();
 
-      console.log(weatherData);
+
     }
 
     getLocation();

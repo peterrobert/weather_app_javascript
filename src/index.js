@@ -2,6 +2,7 @@
 import { CurrentLocation } from "./current";
 
 
+
 class Key {
 
     static theKey(){
@@ -13,7 +14,13 @@ class Key {
 
 }
 
+window.addEventListener('load', () => {
+   
 CurrentLocation.getCo_ordinate();
+
+})
+
+
 
 export{ Key }
 

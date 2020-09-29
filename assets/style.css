@@ -1,3 +1,35 @@
-h1{
-    color: red;
+body{
+    background-color: #04A69B;
 }
+
+.active-pink-2 input.form-control[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #f48fb1;
+    box-shadow: 0 1px 0 0 #f48fb1;
+  }
+  .active-pink input.form-control[type=text] {
+    border-bottom: 1px solid #f48fb1;
+    box-shadow: 0 1px 0 0 #f48fb1;
+  }
+
+  .form_se input{
+    position: relative;
+    top: 10px;
+  }
+
+  .form_se button{
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 800;
+    background: #000;
+    color: #fff;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    position: relative;
+    top: 20px;
+    border: 1px solid #ced4da;
+  }
+
+  .btn:hover{
+    color: #fff;
+  }

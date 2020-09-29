@@ -1,4 +1,5 @@
 import { Key } from "./index";
+import { View } from "./view";
 
 class CurrentLocation {
 
@@ -33,7 +34,9 @@ class CurrentLocation {
 
       const weatherData = await response.json();
 
-
+      View.display(weatherData);
+      
+      console.log(weatherData.weather[0].icon)
     }
 
     getLocation();

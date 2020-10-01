@@ -152,12 +152,17 @@ class View {
     });
 
     let colCont  = document.createElement('div');
+    setAttributes(colCont, {
+      class: "col-sm-6 info" 
+    });
+
+    rowCont.append(colCont);
+    divCont.append(rowCont);
+
+    footerMainCont.append(divCont);
+
     
-
-
-
-
-
+    
 
   }
 

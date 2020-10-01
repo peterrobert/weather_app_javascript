@@ -2,6 +2,10 @@ body{
     background-color: #04A69B;
 }
 
+input{
+  width: 100%;
+}
+
 .active-pink-2 input.form-control[type=text]:focus:not([readonly]) {
     border-bottom: 1px solid #f48fb1;
     box-shadow: 0 1px 0 0 #f48fb1;
@@ -14,6 +18,7 @@ body{
   .form_se input{
     position: relative;
     top: 10px;
+    width: 100%;
   }
 
   .form_se button{
@@ -27,9 +32,50 @@ body{
     font-size: 1rem;
     position: relative;
     top: 20px;
-    border: 1px solid #ced4da;
+
   }
 
   .btn:hover{
     color: #fff;
   }
+
+  .location{
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .location i {
+    font-size: 30px;
+    margin-top: 40px;
+  }
+
+  .location span{
+
+    font-size: 25px;
+    padding-left: 20px;
+    font-family: 'Source Code Pro', monospace;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: bolder;
+    letter-spacing: 2px;
+  
+
+  }
+
+  .location .Temp{
+    font-family: 'Fredoka One', cursive;
+    color: #000;
+    font-size: 100px;
+  }
+
+  .location .degreesIcon{
+    font-family: 'Fredoka One';
+    position: absolute;
+  }
+
+  .location img{
+    margin-top: -50px;
+    height: 200px;
+  }
+
+

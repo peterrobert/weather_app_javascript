@@ -34,9 +34,9 @@ class CurrentLocation {
 
       const weatherData = await response.json();
 
-      // View.display(weatherData);
+      View.display(weatherData);
       
-      // console.log(weatherData.weather[0].icon)
+      console.log(weatherData.weather[0].icon)
     }
 
     getLocation();

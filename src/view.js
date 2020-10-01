@@ -1,3 +1,5 @@
+import { Search } from "./searched";
+
 class View {
 
   static display(info) {
@@ -44,7 +46,10 @@ class View {
    
 
   }
-}
+
+ 
+
+} 
 
 export {
   View

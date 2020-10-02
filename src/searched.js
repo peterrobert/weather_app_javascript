@@ -1,4 +1,6 @@
 import { Key } from "./index";
+import { View } from "./view";
+import { Logic } from "./logic";
 
 class Search {
 
@@ -29,7 +31,7 @@ class Search {
             const weatherData = await response.json();
       
             
-            console.log(weatherData)
+           Logic.logicInfo(weatherData)
           }
       
           getLocation();

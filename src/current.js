@@ -1,5 +1,7 @@
 import { Key } from "./index";
 import { View } from "./view";
+import { Logic } from "./logic";
+
 
 class CurrentLocation {
 
@@ -34,9 +36,10 @@ class CurrentLocation {
 
       const weatherData = await response.json();
 
-      View.Information(weatherData);
+ 
+
+      Logic.logicInfo(weatherData);
       
-      console.log(weatherData.weather[0].icon)
     }
 
     getLocation();

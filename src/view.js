@@ -10,6 +10,7 @@ class View {
 
     console.log(info);
     let mainContainer = document.getElementById("content");
+  
 
     //====== class container
     let divContainer = document.createElement("div");
@@ -138,7 +139,7 @@ class View {
 
     let mainFooterCol = document.createElement('div');
      setAttributes(mainFooterCol, {
-      class: "col-sm-6 info",
+      class: "col-sm-12 col-md-12 info",
     });
 
     let mainFooterH1 = document.createElement('h3');
@@ -178,15 +179,13 @@ class View {
 
     mainFooterCont.append(mainFooterRow);
 
-
     mainFooter.append(mainFooterCont);
-
 
   }
 
   static async Information(Information) {
 
-    let promise = new Promise((resolve, reject) => {
+    let promise = new Promise((resolve) => {
       resolve(Information);
     });
 

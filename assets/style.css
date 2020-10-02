@@ -77,6 +77,14 @@ input{
     height: 200px;
   }
 
+  #cityName{
+    width: 100%;
+  }
+
+  #footer{
+    margin-bottom: 15px;
+  }
+
   .info{
     background-color: #fff;
     width: 100%;

@@ -1,26 +1,24 @@
-//  This is the entry point function
-import { CurrentLocation } from "./current";
-import { Search } from "./searched";
+/* eslint-disable  max-len, no-restricted-syntax, guard-for-in, quotes, no-dupe-keys, camelcase, no-trailing-spaces, no-plusplus,  import/no-cycle */
+import { CurrentLocation } from './current';
+import { Search } from './searched';
 
 
-window.addEventListener("load", () => {
+window.addEventListener('load', () => {
   CurrentLocation.getCo_ordinate();
-
 });
 
-let FormInfo = document.getElementById("submitCountry");
-let cityName = document.getElementById("cityName");
-let contentInfo = document.getElementById('content')
-let footerInfo = document.getElementById('footer');
+const FormInfo = document.getElementById('submitCountry');
+const cityName = document.getElementById('cityName');
+const contentInfo = document.getElementById('content');
+const footerInfo = document.getElementById('footer');
 
 
-
-FormInfo.addEventListener("click", (e) => {
+FormInfo.addEventListener('click', (e) => {
   e.preventDefault();
   contentInfo.innerHTML = '';
-  footerInfo.innerHTML = ''
+  footerInfo.innerHTML = '';
 
-  let searchInfo = new Search();
+  const searchInfo = new Search();
   searchInfo.name = cityName.value;
 
   searchInfo.getSearchedLocation();
@@ -29,17 +27,13 @@ FormInfo.addEventListener("click", (e) => {
 });
 
 
-
-
 class Key {
   static theKey() {
-    const Api_key = "cbda9d8d97a7e7bc3e963379b7d996ba";
+    const ApiKey = 'cbda9d8d97a7e7bc3e963379b7d996ba';
 
-    return Api_key;
-  } 
-
+    return ApiKey;
+  }
 }
 
 
-
-export { Key };
+export { Key };// eslint-disable-line import/prefer-default-export

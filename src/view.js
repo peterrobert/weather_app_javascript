@@ -1,4 +1,7 @@
 /* eslint-disable  max-len, no-restricted-syntax, guard-for-in, quotes, no-dupe-keys, camelcase, no-trailing-spaces, no-plusplus */
+
+import { Key } from "./index";
+
 class View {
   static display(info) {
     function setAttributes(el, attrs) {
@@ -66,16 +69,34 @@ class View {
     });
 
     const temperature = info.main.temp;
+    let convertToFar = temperature - 273.15;
+    let tempFar = Math.round(convertToFar);
+    tempContainer.innerText = tempFar;
+    const inputToggle = Key.checkBoxValues().checkBox;
+    let ans;
 
-    const temperatureValue = (temp = temperature) => {
-      let ans = temp - 273.15;
+    inputToggle.addEventListener("change", () => {
+      if (inputToggle.checked) {
+        ans = temperature - 273.15;
+        ans = Math.round(ans);
 
-      ans = Math.round(ans);
+        let degIcon = document.querySelector(".degreesIcon");
+        degIcon.innerText = "";
 
-      return ans;
-    };
+        degIcon.innerHTML = "&#176";
 
-    tempContainer.innerText = temperatureValue();
+        tempContainer.innerText = ans;
+      } else {
+        let convertToFar = ((temperature - 273.15) * 9) / 5 + 32;
+        let degIcon = document.querySelector(".degreesIcon");
+        degIcon.innerText = "";
+
+        degIcon.innerHTML = "&#8457";
+
+        let tempFar = Math.round(convertToFar);
+        tempContainer.innerText = tempFar;
+      }
+    });
 
     const degreesIcon = document.createElement("span");
     setAttributes(degreesIcon, {

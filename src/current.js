@@ -32,9 +32,7 @@ class CurrentLocation {
 
       const weatherData = await response.json();
       Logic.logicInfo(weatherData);
-     
-      let Converse =  new Logic(weatherData);
-      Converse.conversionTemperature()
+
 
 
     }

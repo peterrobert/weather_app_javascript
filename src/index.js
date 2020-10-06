@@ -1,7 +1,11 @@
 /* eslint-disable  max-len, no-restricted-syntax, guard-for-in, quotes, no-dupe-keys, camelcase, no-trailing-spaces, no-plusplus,  import/no-cycle */
-import { CurrentLocation } from "./current";
-import { Search } from "./searched";
-import { Logic } from "./logic";
+import {
+  CurrentLocation
+} from "./current";
+import {
+  Search
+} from "./searched";
+
 
 window.addEventListener("load", () => {
   CurrentLocation.getCo_ordinate();
@@ -27,12 +31,6 @@ FormInfo.addEventListener("click", (e) => {
 
 // === Check Box
 
-let checkBox = document.getElementById("toggleBtn");
-checkBox.addEventListener("change", () => {
-  if (checkBox.checked) {
-  } else {
-  }
-});
 
 class Key {
   static theKey() {
@@ -40,6 +38,18 @@ class Key {
 
     return ApiKey;
   }
+
+  static checkBoxValues() {
+
+    let checkBox = document.getElementById("toggleBtn");
+
+    return {
+      checkBox
+    }
+
+  }
 }
 
-export { Key }; // eslint-disable-line import/prefer-default-export
+export {
+  Key
+}; // eslint-disable-line import/prefer-default-export

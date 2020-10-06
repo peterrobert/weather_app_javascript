@@ -2,9 +2,28 @@
 import { View } from './view';
 
 class Logic {
-  static logicInfo(data) {
-    View.Information(data);
+   
+  constructor(_infor){
+
+    this.infor = _infor
+
   }
+
+  conversionTemperature(){
+
+    const dataIn = this.infor;
+
+    console.log(dataIn);
+
+  }
+
+  static logicInfo(data) {
+
+    View.Information(data);
+
+  }
+
+
 }
 
 export { Logic }; // eslint-disable-line import/prefer-default-export

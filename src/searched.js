@@ -26,6 +26,10 @@ class Search {
 
 
       Logic.logicInfo(weatherData);
+        
+      let Converse =  new Logic(weatherData);
+      Converse.conversionTemperature()
+   
     }
 
     getLocation();

@@ -1,8 +1,14 @@
 /* eslint-disable  max-len, no-restricted-syntax, guard-for-in, quotes, no-dupe-keys, camelcase, no-alert, no-trailing-spaces, no-plusplus,  import/no-cycle */
-import { Key } from './index';
-import { Logic } from './logic';
+import {
+  Key
+} from './index';
+import {
+  Logic
+} from './logic';
 
 class CurrentLocation {
+
+
   static getCo_ordinate() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(this.myLocation);
@@ -16,22 +22,31 @@ class CurrentLocation {
     const long = position.coords.longitude;
 
     async function getLocation() {
+
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${Key.theKey()}`,
-        {
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${Key.theKey()}`, {
           mode: 'cors',
         },
 
       );
 
       const weatherData = await response.json();
-
-
       Logic.logicInfo(weatherData);
+     
+      let Converse =  new Logic(weatherData);
+      Converse.conversionTemperature()
+
+
     }
 
     getLocation();
+
+ 
   }
+
+
 }
 
-export { CurrentLocation };// eslint-disable-line import/prefer-default-export
+export {
+  CurrentLocation
+}; // eslint-disable-line import/prefer-default-export

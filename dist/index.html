@@ -1,16 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- fonts  -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <script src="https://use.fontawesome.com/9f4d1c0a75.js"></script>
 </head>
+
 <body>
 
-    <div id="content"></div>
-    
-    hey there
+    <div class="header-contents container">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="form form_se">
+                    <form class="form-inline mr-auto" id="locationForm">
+                        <input class="form-control mr-sm-2" type="text" placeholder="city name only major city names"
+                            aria-label="Search" id="cityName">
+                        <button class="btn btn-unique btn-rounded btn-sm my-0" type="submit"
+                            id="submitCountry">Search</button>
+                    </form>
+
+
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="toggleBtn" checked>
+                    <span class="slider round"></span>
+                </label>
+
+                <span class="conversion">convert to Celsius or Fahrenheit </span>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="content">
+
+    </div>
+
+    <div id="footer">
+
+    </div>
 
     <script src="main.js"></script>
 </body>
+
 </html>

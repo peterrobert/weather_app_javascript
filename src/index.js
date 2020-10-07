@@ -44,7 +44,7 @@ class Key {
     let checkBox = document.getElementById("toggleBtn");
 
     return {
-      checkBox
+      checkBox,contentInfo
     }
 
   }

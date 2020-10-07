@@ -171,4 +171,8 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+.error {
+  margin-top: 100px;
+}
 /* stylelint-enable  no-descending-specificity, font-family-no-missing-generic-family-keyword */

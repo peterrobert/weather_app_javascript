@@ -105,9 +105,9 @@ input {
 }
 
 /* switch styles */
-.conversion{
+.conversion {
   position: relative;
-    top: 5px;
+  top: 5px;
   font-family: 'Source Code Pro', monospace;
 }
 
@@ -119,7 +119,7 @@ input {
   margin-top: 40px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -133,11 +133,11 @@ input {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-.slider:before {
+.slider::before {
   position: absolute;
   content: "";
   height: 26px;
@@ -145,8 +145,8 @@ input {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
@@ -157,7 +157,7 @@ input:focus + .slider {
   box-shadow: 0 0 1px #000;
 }
 
-input:checked + .slider:before {
+input:checked + .slider::before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -168,7 +168,7 @@ input:checked + .slider:before {
   border-radius: 34px;
 }
 
-.slider.round:before {
+.slider.round::before {
   border-radius: 50%;
 }
 

@@ -25,7 +25,7 @@ In this project i use the fetch api and the knowledge of async programming to cr
 
 - To see the live site check here
 
-   [Live Demo Link](https://rawcdn.githack.com/peterrobert/weather_app_javascript/2d811c5b79646ea9a060ba8a7a52c4ac2155fc06/dist/index.html)
+   [Live Demo Link](https://rawcdn.githack.com/peterrobert/weather_app_javascript/7d49ecb01048dd03170054ac5e7e6306858d5e94/dist/index.html)
 
 
 ## Authors  ![Hireable](https://img.shields.io/badge/HIREABLE-YES-yellowgreen&?style=for-the-badge)

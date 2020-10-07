@@ -1,11 +1,6 @@
 /* eslint-disable  max-len, no-restricted-syntax, guard-for-in, quotes, no-dupe-keys, camelcase, no-trailing-spaces, no-plusplus,  import/no-cycle */
-import {
-  CurrentLocation
-} from "./current";
-import {
-  Search
-} from "./searched";
-
+import { CurrentLocation } from "./current";
+import { Search } from "./searched";
 
 window.addEventListener("load", () => {
   CurrentLocation.getCo_ordinate();
@@ -31,7 +26,6 @@ FormInfo.addEventListener("click", (e) => {
 
 // === Check Box
 
-
 class Key {
   static theKey() {
     const ApiKey = "cbda9d8d97a7e7bc3e963379b7d996ba";
@@ -40,16 +34,13 @@ class Key {
   }
 
   static checkBoxValues() {
-
-    let checkBox = document.getElementById("toggleBtn");
+    const checkBox = document.getElementById("toggleBtn");
 
     return {
-      checkBox,contentInfo
-    }
-
+      checkBox,
+      contentInfo,
+    };
   }
 }
 
-export {
-  Key
-}; // eslint-disable-line import/prefer-default-export
+export { Key }; // eslint-disable-line import/prefer-default-export

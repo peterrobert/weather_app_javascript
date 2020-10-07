@@ -1,10 +1,9 @@
-/* eslint-disable  max-len, no-restricted-syntax, guard-for-in, quotes, no-dupe-keys, camelcase, no-trailing-spaces, no-plusplus,  import/no-cycle */
+/* eslint-disable  max-len, no-empty, no-restricted-syntax, guard-for-in, quotes, no-dupe-keys, camelcase, no-trailing-spaces, no-plusplus,  import/no-cycle */
 import { Key } from "./index";
 import { Logic } from "./logic";
 
 class Search {
   constructor(_name) {
-
     this.name = _name;
   }
 
@@ -17,19 +16,12 @@ class Search {
           `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${Key.theKey()}`,
           {
             mode: "cors",
-          }
+          },
         );
 
         const weatherData = await response.json();
         Logic.logicInfo(weatherData);
-
-        console.log(weatherData)
-        
-      } catch (error) {
-
-        console.log(error);
-
-      }
+      } catch (error) {}
     }
 
     getLocation();

@@ -1,17 +1,15 @@
-/* eslint-disable  max-len, no-restricted-syntax, guard-for-in, quotes, no-dupe-keys, camelcase, no-trailing-spaces, no-plusplus */
-
+/* eslint-disable  max-len, no-restricted-syntax, import/no-cycle, guard-for-in, quotes, no-dupe-keys, camelcase, no-trailing-spaces, no-plusplus */
 import { Key } from "./index";
 
 class View {
   static display(info) {
-    if (info.cod == 200) {
-      function setAttributes(el, attrs) {
-        for (const key in attrs) {
-          // eslint-disable-line no-restricted-syntax
-          el.setAttribute(key, attrs[key]);
-        }
+    function setAttributes(el, attrs) {
+      for (const key in attrs) {
+        // eslint-disable-line no-restricted-syntax
+        el.setAttribute(key, attrs[key]);
       }
-
+    }
+    if (info.cod === 200) {
       const mainContainer = document.getElementById("content");
 
       //= ===== class container
@@ -70,8 +68,8 @@ class View {
       });
 
       const temperature = info.main.temp;
-      let convertToFar = temperature - 273.15;
-      let tempFar = Math.round(convertToFar);
+      const convertToFar = temperature - 273.15;
+      const tempFar = Math.round(convertToFar);
       tempContainer.innerText = tempFar;
       const inputToggle = Key.checkBoxValues().checkBox;
       let ans;
@@ -81,20 +79,20 @@ class View {
           ans = temperature - 273.15;
           ans = Math.round(ans);
 
-          let degIcon = document.querySelector(".degreesIcon");
+          const degIcon = document.querySelector(".degreesIcon");
           degIcon.innerText = "";
 
           degIcon.innerHTML = "&#176";
 
           tempContainer.innerText = ans;
         } else {
-          let convertToFar = ((temperature - 273.15) * 9) / 5 + 32;
-          let degIcon = document.querySelector(".degreesIcon");
+          const convertToFar = ((temperature - 273.15) * 9) / 5 + 32;
+          const degIcon = document.querySelector(".degreesIcon");
           degIcon.innerText = "";
 
           degIcon.innerHTML = "&#8457";
 
-          let tempFar = Math.round(convertToFar);
+          const tempFar = Math.round(convertToFar);
           tempContainer.innerText = tempFar;
         }
       });
@@ -200,9 +198,9 @@ class View {
       mainFooter.append(mainFooterCont);
     } else {
       const mainContainerError = document.getElementById("content");
-      let valInfo = info.message;
+      const valInfo = info.message;
 
-      let structure = `
+      const structure = `
       <div class = "container error">
       <div class="alert alert-success" role="alert">
       <h4 class="alert-heading">404!</h4>
@@ -211,9 +209,9 @@ class View {
       <p class="mb-0">Kindly search for another city</p>
     </div>
     </div>
-    `
-     
-     mainContainerError.innerHTML = structure;
+    `;
+
+      mainContainerError.innerHTML = structure;
     }
   }
 

@@ -1,4 +1,4 @@
-/* eslint-disable  max-len, no-restricted-syntax, guard-for-in, quotes, no-dupe-keys, camelcase, no-alert, no-trailing-spaces, no-plusplus,  import/no-cycle */
+/* eslint-disable  max-len, no-restricted-syntax, no-empty, guard-for-in, quotes, no-dupe-keys, camelcase, no-alert, no-trailing-spaces, no-plusplus,  import/no-cycle */
 import { Key } from "./index";
 import { Logic } from "./logic";
 
@@ -6,10 +6,6 @@ class CurrentLocation {
   static getCo_ordinate() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(this.myLocation);
-    } else {
-      alert(
-        "Geolocation is not supported by this browser! Press okey to continue"
-      );
     }
   }
 
@@ -18,25 +14,17 @@ class CurrentLocation {
     const long = position.coords.longitude;
 
     async function getLocation() {
-      
       try {
         const response = await fetch(
           `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${Key.theKey()}`,
           {
             mode: "cors",
-          }
+          },
         );
         const weatherData = await response.json();
 
-  
         Logic.logicInfo(weatherData);
-        console.log(weatherData)
-      }
-      catch(err){
-       
-        console.log(err);
-        
-      }
+      } catch (err) {}
     }
 
     getLocation();
